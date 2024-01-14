@@ -20,6 +20,13 @@ document.addEventListener('DOMContentLoaded', function(){
         document.querySelector('.header-container').classList.add('tpu');
     });
 
+    var headerLinks = document.querySelectorAll('.side-menu a');
+    for (var i = 0; i < headerLinks.length; i++) {
+        headerLinks[i].addEventListener('click', function() {
+            document.getElementById('hamcross').click();
+        });
+    }
+
     document.getElementById('hamcross').addEventListener('click', function(){
         this.style.display = 'none';
         var hamburger = document.getElementById('hamburger');
