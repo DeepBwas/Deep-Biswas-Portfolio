@@ -1,0 +1,593 @@
+/* DEEP BISWAS */
+@media screen and (max-width: 640px){
+
+}
+@media screen and (max-width: 768px){
+    
+}
+@media screen and (max-width: 1024px){
+    
+}
+@media screen and (max-width: 1280px){
+    
+}
+@media screen and (max-width: 1536px){
+    
+}
+/* Custom Fonts */
+@font-face {
+    font-family: 'Rolf';
+    src: url(../fonts/Rolf-Medium.otf);
+}
+@font-face {
+    font-family: 'Arida';
+    src: url(../fonts/Arida-Regular.ttf);
+}
+@font-face {
+    font-family: 'Nata';
+    src: url(../fonts/Nata-Light.otf);
+}
+@font-face {
+    font-family: 'Robusto';
+    src: url(../fonts/Robusto-Black.ttf);
+}
+@font-face {
+    font-family: 'SF-Pro';
+    src: url(../fonts/SF-Pro.otf);
+}
+/* Styles for the html pages */
+.html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+.icon8{
+    display: none;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #0e0e0e;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #fcee0a;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid #4af1ff;
+}
+@media screen and (max-width: 860px){
+    ::-webkit-scrollbar{
+        width: 5px;
+    }
+    ::-webkit-scrollbar-thumb{
+        border-radius: 5px;
+    }
+}
+/* Styles for the header */
+header{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px 40px;
+}
+.header-container.tpu{
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+.header-logo, .header-nav{
+    display: flex;
+    align-items: center;
+}
+.header-linked{
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+.header-logo img{
+    margin-top: 2px;
+    height: 30px;
+    width: auto;
+}
+.header-nav ul{
+    display: flex;
+    list-style-type: none;
+}
+.header-nav ul li{
+    margin-right: 20px;
+}
+.header-nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-family: 'SF-Pro', sans-serif;
+    transition: 0.4s;
+}
+.header-nav ul li a:hover{
+    color: #fcee0a;
+    text-decoration: underline;
+}
+.header-linked a, .header-git a{
+    color: white;
+    margin-left: 30px;
+    transition: 0.4s;
+}
+.header-linked a:hover, .header-git a:hover{
+    color: #fcee0a;
+}
+.menu-cross{
+    cursor: pointer;
+}
+.menu-cross i:hover{
+    color: #fcee0a;
+}
+.menu-button{
+    cursor: pointer;
+    display: none;
+    color: white;
+    margin: 20px 0 20px 30px; 
+}
+.menu-button:hover{
+    color: #fcee0a;
+}
+#hamcross{
+    display: none;
+    color: white;
+    margin: 20px 0 20px 32px;
+}
+.side-menu{
+    height: 100vh;
+    width: 90vw;
+    position: fixed;
+    transition: 0.5s;
+    transform: translateX(-110%);
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.side-menu nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+.side-menu nav ul li{
+    margin: 30px 0 30px 0;
+}
+.side-menu nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-family: 'SF-Pro', sans-serif;
+    transition: 0.4s;
+}
+.side-menu nav ul li a:hover{
+    color: #fcee0a;
+    text-decoration: underline;
+}
+.side-menu.visible{
+    transform: translateX(0);
+    left: 0;
+}
+.fade{
+    animation: fade 1s;
+}
+@keyframes fade{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@media screen and (max-width: 650px){
+    .header-container{
+        padding: 10px 20px;
+    }
+}
+@media screen and (max-width: 860px){
+    .header-nav{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+/* Main Styling */
+.first-banner{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    user-select: none;
+    margin-bottom: -5px;
+}
+.first-banner img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+.av-time{
+    display: flex;
+    position: absolute;
+    top: 10%;
+    right: 25%;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.av-time p:nth-child(1){
+    color: #fcee0a;
+    font-size: 1vw;
+}
+.av-time p:nth-child(1) span{
+    font-family: 'DM Serif Display', sans-serif;
+    font-size: 9vw;
+    color: #f5f5f5;
+}
+.av-time p:nth-child(2){
+    color: #f5f5f5;
+    font-family: 'SF-Pro', sans-serif;
+    font-size: 1.3vw;
+    padding-top: 2.75vw;
+    width: 40px;
+    padding-left: 10px;
+}
+.av-time p:nth-child(2) span{
+    font-family: 'DM Serif Display', sans-serif;
+    letter-spacing: 5px;
+    color: #fcee0a;
+}
+.fb-text{
+    padding: 0 2.5vw 0 2.5vw;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20%;
+}
+.fb-text h2{
+    width: 40%;
+    font-size: 2vw;
+    color: #f5f5f5;
+    font-family: 'DM Serif Display', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.fb-text h2 span{
+    font-family: 'Rolf', sans-serif;
+    font-size: 8vw;
+    line-height: 9vw;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.fb-text p{
+    padding-top: 11.25%;
+    width: 50%;
+    min-height: 1em;
+    text-indent: 7vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.75vw;
+    color: #f5f5f5;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.hidden{
+    visibility: hidden;
+}
+.highlight{
+    color: #fcee0a;
+    animation: color-fade-in 1s ease-in-out forwards;
+}
+@keyframes color-fade-in{
+    0% { color: #f5f5f5; }
+    100% { color: #fcee0a; }
+}
+.cursor{
+    display: inline-block;
+    width: 1.3px;
+    height: 0.8em;
+    background-color: #fcee0a;
+    animation: blink 1s step-end infinite;
+}
+.alt-fb-text{
+    background: linear-gradient(#ad780d, #030303);
+    padding: 2.5vw 2.5vw 2.5vw 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.75vw;
+    color: #f5f5f5;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    display: none;
+} 
+@keyframes blink {
+    0%, 100% { background-color: transparent }
+    50% { background-color: #f5f5f5; }
+}
+@media screen and (min-width: 0px) and (max-width: 640px){
+    .av-time{
+        top: 15%;
+    }
+    .av-time p:nth-child(1){
+        font-size: 2.2vw;
+    }
+    .av-time p:nth-child(1) span{
+        font-size: 14vw;
+    }
+    .av-time p:nth-child(2){
+        font-size: 2.6vw;
+        padding-top: 3.6vw;
+    }
+    .fb-text h2{
+        position: absolute;
+        right: -18vw;
+        font-size: 4.3vw;
+        transform: translateY(17vw);
+    }
+    .fb-text h2 span{
+        font-size: 12vw;
+        line-height: 13vw;
+    }
+    .fb-text h2 span{
+        font-size: 14vw;
+        line-height: 15vw;
+    }
+    .fb-text p{
+        display: none;
+    }
+    .alt-fb-text{
+        padding: 4vw;
+        display: block;
+        font-size: 4vw;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 768px){
+    .av-time{
+        right: 35vw;
+        top: 17%;
+    }
+    .av-time p:nth-child(1){
+        font-size: 2.2vw;
+    }
+    .av-time p:nth-child(1) span{
+        font-size: 14vw;
+    }
+    .av-time p:nth-child(2){
+        font-size: 2.3vw;
+        padding-top: 3.6vw;
+    }
+    .fb-text h2{
+        position: absolute;
+        right: -28vw;
+        font-size: 4.3vw;
+        transform: translateY(17vw);
+    }
+    .fb-text h2 span{
+        font-size: 12vw;
+        line-height: 13vw;
+    }
+    .fb-text h2 span{
+        font-size: 10vw;
+        line-height: 11vw;
+    }
+    .fb-text p{
+        display: none;
+    }
+    .alt-fb-text{
+        padding: 4vw;
+        display: block;
+        font-size: 4vw;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .av-time{
+        right: 35vw;
+        top: 15%;
+    }
+    .av-time p:nth-child(1){
+        font-size: 2vw;
+    }
+    .av-time p:nth-child(1) span{
+        font-size: 12vw;
+    }
+    .av-time p:nth-child(2){
+        font-size: 2vw;
+        padding-top: 3.4vw;
+    }
+    .fb-text h2{
+        position: absolute;
+        right: -29vw;
+        font-size: 4.3vw;
+        transform: translateY(17vw);
+    }
+    .fb-text h2 span{
+        font-size: 10vw;
+        line-height: 11vw;
+    }
+    .fb-text p{
+        display: none;
+    }
+    .alt-fb-text{
+        padding: 4vw;
+        display: block;
+        font-size: 4vw;
+    }
+}
+/* Tech Stack */
+.tech-stack{
+    margin-top: -20px;
+    margin-bottom: -1vw;
+    background: linear-gradient(#0e0e0e, #0e0e0e, #0e0e0e, #0e0e0e, #0d0d0d);
+    padding: 5vw 0 5vw 5vw;
+    user-select: none;
+}
+.tech-s-container{
+    text-align: center;
+    padding: 0 2vw 3vw 2vw;
+}
+.tech-s-container h2{
+    font-family: 'Robusto', sans-serif;
+    font-size: 3.75vw;
+    color: #f5f5f5;
+    text-align: center;
+    margin-bottom: 2vw;
+    letter-spacing: 3px;
+}
+.tech-s-container p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.5vw;
+    color: #f5f5f5;
+    text-align: center;
+    margin-bottom: 2vw;
+    padding-bottom: 2vw;
+}
+.tech-stack-logos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8vw;
+    justify-content: center;
+    flex-direction: row;
+}
+.ts-logo a{
+    text-decoration: none;
+    transition: fill 0.8s ease-in-out;
+}
+.ts-logo a p{
+    font-size: 0.8vw;
+    font-family: 'SF-Pro', sans-serif;
+}
+.ts-logo a:hover svg{
+    filter: drop-shadow(0 0 10px #ffffff);
+}
+@media screen and (max-width: 640px){
+    .tech-stack h2{
+        font-size: 10vw;
+    }
+    .tech-stack p{
+        font-size: 4vw;
+    }
+    .ts-logo a p{
+        font-size: 4vw;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 768px){
+    .tech-stack h2{
+        font-size: 7vw;
+    }
+    .tech-stack p{
+        font-size: 2vw;
+    }
+    .ts-logo a p{
+        font-size: 3vw;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .tech-stack h2{
+        font-size: 6vw;
+    }
+    .tech-stack p{
+        font-size: 1.5vw;
+    }
+    .ts-logo a p{
+        font-size: 2.5vw;
+    }
+}
+/* About Me */
+.about-me{
+    background: linear-gradient(#0d0d0d, #ad780d);
+    padding: 5vw 0 5vw 0;
+    user-select: none;
+}
+.am-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2vw 3vw 2vw;
+}
+.am-container h2{
+    font-family: 'Robusto', sans-serif;
+    font-size: 3.75vw;
+    color: #f5f5f5;
+    text-align: center;
+    margin-bottom: 2vw;
+    letter-spacing: 3px;
+}
+.am-container h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.5vw;
+    color: #fcee0a;
+    text-align: center;
+    padding-bottom: .1vw;
+    text-transform: uppercase;
+}
+.am-container p{
+    font-family: 'SF-Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+    color: #f5f5f5;
+    text-align: center;
+    width: 50vw;
+}
+.am-container img{
+    background: linear-gradient(57deg, #d000ff, #00d0ff, #ff0000, #fffa00, #00ff20);
+    background-size: 1000% 1000%;
+    animation: gradientani 5s ease infinite;
+    border-radius: 500px;
+    width: 20vw;
+    height: 20vw;
+    border: solid 0.5vw #fcee0a;
+}
+@keyframes gradientani{ 
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
+}
+@media screen and (max-width: 640px){
+    .am-container h2{
+        font-size: 10vw;
+    }
+    .am-container h3{
+        font-size: 4vw;
+    }
+    .am-container p{
+        font-size: 4vw;
+        width: 80vw;
+    }
+    .am-container img{
+        width: 40vw;
+        height: 40vw;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 768px){
+    .am-container h2{
+        font-size: 7vw;
+    }
+    .am-container h3{
+        font-size: 4vw;
+    }
+    .am-container p{
+        font-size: 3vw;
+    }
+    .am-container img{
+        width: 30vw;
+        height: 30vw;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .am-container h2{
+        font-size: 6vw;
+    }
+    .am-container h3{
+        font-size: 3.5vw;
+    }
+    .am-container p{
+        font-size: 2.5vw;
+    }
+    .am-container img{
+        width: 20vw;
+        height: 20vw;
+    }
+}
