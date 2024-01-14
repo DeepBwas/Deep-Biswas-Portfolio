@@ -591,3 +591,18 @@ header{
         height: 20vw;
     }
 }
+/* My Projects */
+.my-projects{
+    height: auto;
+    width: 100%;
+    padding: 5vw 2vw 5vw 2vw;
+    background: linear-gradient(#ad780d, #5e4006, #0e0e0e);
+    user-select: none;
+}
+.mp-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
