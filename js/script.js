@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         }
     }
-    var intervalId = setInterval(typeWriter, 40);
+    var intervalId = setInterval(typeWriter, 60);
 
     // Alt Typewriter JavaScript
     var altFbText = document.querySelector('.alt-fb-text p');
@@ -143,5 +143,5 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
             }
         }
-    }, 40);
+    }, 60);
 });
