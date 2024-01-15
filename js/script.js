@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function(){
-    
     // Header JavaScript
     var logo = document.querySelector('.header-logo img');
     logo.setAttribute('data-original-src', logo.src);
@@ -115,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         }
     }
-    var intervalId = setInterval(typeWriter, 60);
+    var intervalId = setInterval(typeWriter, 50);
 
     // Alt Typewriter JavaScript
     var altFbText = document.querySelector('.alt-fb-text p');
@@ -143,5 +142,5 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
             }
         }
-    }, 60);
+    }, 50);
 });
