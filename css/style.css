@@ -859,3 +859,17 @@ header{
         font-size: 1.5vw;
     }
 }
+/* Conatact Styling */
+.contact{
+    background: #0e0e0e;
+    padding: 5vw 0 5vw 0;
+    user-select: none;
+}
+.contact-container h2{
+    font-family: 'Robusto', sans-serif;
+    font-size: 3.75vw;
+    color: #f5f5f5;
+    text-align: center;
+    margin-bottom: 2vw;
+    letter-spacing: 3px;
+}
