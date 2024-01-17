@@ -859,6 +859,149 @@ header{
         font-size: 1.5vw;
     }
 }
+/* Socails Styling */
+.socials{
+    background-color: #0e0e0e;
+    padding: 5vw 0 5vw 0;
+    user-select: none;
+    width: 100%;
+    height: auto;
+}
+.socials h2{
+    font-family: 'Robusto', sans-serif;
+    font-size: 3.75vw;
+    color: #f5f5f5;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.socials-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.social-links{
+    background-color: #fec84e;
+    background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18vw;
+    width: 70vw;
+    border-radius: 10px;
+}
+.social div{
+    border: solid 0.2vw #0e0e0e;
+    border-radius: 7px;
+    padding: 2vw;
+    cursor: pointer;
+    min-width: 5vw;
+    transition: 0.6s;
+}
+.social div a{
+    text-decoration: none;
+    color: #0e0e0e;
+    font-family: 'SF-Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1.5vw;
+    transition: 0.6s;
+}
+.social svg{
+    width: 4vw;
+    height: 4vw;
+    transition: 0.1s;
+}
+.social div:hover{
+    background-image: linear-gradient( 109.6deg,  rgb(64, 32, 97) 11.2%, rgba(2,0,4,1) 91.1% );
+}
+.social div:hover svg{
+    filter: drop-shadow(0 0 10px #fcee0a);
+}
+.social div:hover a{
+    text-decoration: underline #fcee0a;
+    color: #f5f5f5;
+}
+.social div:active{
+    transform: scale(0.95);
+}
+@media screen and (max-width: 640px){
+    .socials h2{
+        font-size: 10vw;
+    }
+    .socials-container{
+        padding: 2vw;
+    }
+    .social-links{
+        width: 90vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+    }
+    .social{
+        width: 90vw;
+    }
+    .social div{
+        padding: 4vw;
+    }
+    .social div a{
+        font-size: 4vw;
+    }
+    .social svg{
+        width: 10vw;
+        height: 10vw;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 768px){
+    .socials h2{
+        font-size: 7vw;
+    }
+    .socials-container{
+        padding: 0;
+    }
+    .social-links{
+        width: 90vw;
+        justify-content: center;
+        align-items: center;
+        gap: 10vw;
+    }
+    .social div{
+        padding: 4vw;
+    }
+    .social div a{
+        font-size: 3vw;
+    }
+    .social svg{
+        width: 10vw;
+        height: 10vw;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .socials h2{
+        font-size: 6vw;
+    }
+    .socials-container{
+        padding: 0;
+    }
+    .social-links{
+        width: 90vw;
+        justify-content: center;
+        align-items: center;
+        gap: 15vw;
+    }
+    .social div{
+        padding: 4vw;
+    }
+    .social div a{
+        font-size: 2.5vw;
+    }
+    .social svg{
+        width: 10vw;
+        height: 10vw;
+    }
+}
 /* Conatact Styling */
 .contact{
     background: #0e0e0e;

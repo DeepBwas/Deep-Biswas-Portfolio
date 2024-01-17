@@ -143,4 +143,23 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         }
     }, 50);
+
+    // Social Clicks Handler JavaScript
+    window.onload = function() {
+        const githubDiv = document.getElementById('github');
+        const linkedinDiv = document.getElementById('linkedin');
+        const stdmailDiv = document.getElementById('stdmail');
+
+        githubDiv.addEventListener('click', function() {
+            this.querySelector('a').click();
+        });
+
+        linkedinDiv.addEventListener('click', function() {
+            this.querySelector('a').click();
+        });
+
+        stdmailDiv.addEventListener('click', function() {
+            this.querySelector('a').click();
+        });
+    }
 });
