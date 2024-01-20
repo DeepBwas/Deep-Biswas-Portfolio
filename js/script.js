@@ -144,8 +144,8 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     }, 50);
 
-    // Month Handler JavaScript
-    window.onload = function() {
+    window.onload = function(){
+        // Month Handler JavaScript
         let date = new Date();
         let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         let month = monthNames[date.getMonth()];
@@ -155,15 +155,15 @@ document.addEventListener('DOMContentLoaded', function(){
         const linkedinDiv = document.getElementById('linkedin');
         const stdmailDiv = document.getElementById('stdmail');
 
-        githubDiv.addEventListener('click', function() {
+        githubDiv.addEventListener('click', function(){
             this.querySelector('a').click();
         });
 
-        linkedinDiv.addEventListener('click', function() {
+        linkedinDiv.addEventListener('click', function(){
             this.querySelector('a').click();
         });
 
-        stdmailDiv.addEventListener('click', function() {
+        stdmailDiv.addEventListener('click', function(){
             this.querySelector('a').click();
         });
     }
