@@ -144,8 +144,13 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     }, 50);
 
-    // Social Clicks Handler JavaScript
+    // Month Handler JavaScript
     window.onload = function() {
+        let date = new Date();
+        let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        let month = monthNames[date.getMonth()];
+        document.getElementById("currentMonth").textContent = month;
+        // Social Clicks Handler JavaScript
         const githubDiv = document.getElementById('github');
         const linkedinDiv = document.getElementById('linkedin');
         const stdmailDiv = document.getElementById('stdmail');
