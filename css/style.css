@@ -882,6 +882,7 @@ header{
     user-select: none;
     width: 100%;
     height: auto;
+    margin-top: -2vw;
 }
 .socials h2{
     font-family: 'Robusto', sans-serif;
@@ -1018,11 +1019,180 @@ header{
         height: 10vw;
     }
 }
+/* Extras Styling */
+.extras{
+    background-color: #0e0e0e;
+    user-select: none;
+    width: 100%;
+    height: auto;
+    margin-top: -3.5vw;
+    padding-bottom: 200px; /* This is to be removed */
+}
+.extras h2{
+    font-family: 'Robusto', sans-serif;
+    font-size: 3.75vw;
+    color: #f5f5f5;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.ext-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 11vw 0 11vw;
+    gap: 2vw;
+    background-color: #0e0e0e;
+}
+.extra{
+    height: 40vw;
+    width: 19.2vw;
+    background-color: #fec84e;
+    background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+    padding: 2vw;
+    gap: 1vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+.extra:hover{
+    transform: scale(1.05) rotate(0.5deg);
+    filter: drop-shadow(0 0 20px #ffd700);
+}
+.extra h3{
+    font-family: 'Robusto', sans-serif;
+    font-weight: 600;
+    font-size: 3.5vw;
+    color: #0e0e0e;
+    text-align: center;
+    padding-bottom: .1vw;
+    text-transform: uppercase;
+}
+.extra p{
+    font-family: 'SF-Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+    color: #0e0e0e;
+    text-align: center;
+    width: 90%;
+}
+.extra img{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 7px;
+}
+@media screen and (max-width: 640px){
+    .extras{
+        margin-top: -10vw;
+    }
+    .extras h2{
+        font-size: 10vw;
+    }
+    .ext-con{
+        padding: 0;
+        flex-direction: column;
+        gap: 7.5vw;
+    }
+    .extra{
+        height: 135vw;
+        width: 90vw;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2vw;
+    }
+    .extra h3{
+        font-size: 10vw;
+        text-align: center;
+        line-height: 12vw;
+        margin: -0.25vw;
+    }
+    .extra p{
+        text-align: center;
+        font-size: 4vw;
+    }
+    .extra img{
+        width: 80vw;
+        height: 80vw;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 768px){
+    .extras{
+        margin-top: -6vw;
+    }
+    .extras h2{
+        font-size: 7vw;
+    }
+    .ext-con{
+        padding: 0;
+        gap: 2.5vw;
+    }
+    .extra{
+        width: 28.5vw;
+        height: 80vw;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2vw;
+        padding: 0.5vw;
+    }
+    .extra h3{
+        font-size: 6vw;
+        text-align: center;
+    }
+    .extra p{
+        text-align: center;
+        font-size: 2vw;
+    }
+    .extra img{
+        width: 26vw;
+        height: 26vw;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .extras{
+        margin-top: -6vw;
+    }
+    .extras h2{
+        font-size: 6vw;
+    }
+    .ext-con{
+        padding: 0 1vw 0 1vw;
+    }
+    .extra{
+        width: 29vw;
+        padding: 0.5vw;
+        padding-top: 2vw;
+        height: 70vw;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.3vw;
+    }
+    .extra h3{
+        font-size: 5vw;
+        text-align: center;
+    }
+    .extra p{
+        font-size: 2vw;
+        text-align: center;
+    }
+    .extra img{
+        width: 20vw;
+        height: 20vw;
+    }
+}
 /* Conatact Styling */
 .contact{
     background: #0e0e0e;
     padding: 5vw 0 5vw 0;
     user-select: none;
+    margin-top: -2vw;
+    display: none;
 }
 .contact-container h2{
     font-family: 'Robusto', sans-serif;
