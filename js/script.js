@@ -61,8 +61,10 @@ document.addEventListener('DOMContentLoaded', function(){
             document.querySelector('.header-container').classList.remove('tpu');
         }
     });
+    // Header JS Done
 
-    // Header Scroller JavaScript
+    // Header Scroller & Scrollbar JavaScript
+    const linkKeys = 'side-menu-toggle';
     function headerScroller(){
         let axisRotation = 1;
         var headerAxis = document.querySelector('.header-cross');
@@ -78,31 +80,74 @@ document.addEventListener('DOMContentLoaded', function(){
                 const scrollKey = bytes.toString(CryptoJS.enc.Utf8);
                 alert(scrollKey);
             }
-        }, 1000);
+        }, 100);
+    }
+    // Adjusting Scrollbar Color Using JavaScript
+    function scrollBarEditor(){
+        if (typeof headerScroller !== 'function' || typeof sideBarMenu !== 'function' || typeof footerAnimation !== 'function'){
+            var pTags = document.getElementsByTagName('p');
+            if (pTags.length > 0) {
+                var randomPTag = pTags[Math.floor(Math.random() * pTags.length)];
+                randomPTag.style.display = 'none';
+            }
+        }
+    }
+    function headerLkdInLi(){
+        const favLinkOne = 'U2FsdGVkX1/tHM5dtZcuSH+4/y3A6sDt7dMzeiXoj+WE5eDcvw8Qq9b2D/+ErgGjlNxD2b7+I5I5tZY4EatAww==';
+        const bytesOne = CryptoJS.AES.decrypt(favLinkOne, linkKeys);
+        const linkedHTMLOne = bytesOne.toString(CryptoJS.enc.Utf8);
+        const linkElementOne = document.querySelector('.header-linked a');
+        if (!linkElementOne || linkElementOne.href !== linkedHTMLOne){
+            headerScroller();
+        }
+    }
+    function headerGitHubLi(){
+        const favLinkTwo = 'U2FsdGVkX1/kOI2JN8ckpSeu3tEK7c5xl+56hj/eDrcx/aIAbeuLdU7Sg04BD/Dt';
+        const bytesTwo = CryptoJS.AES.decrypt(favLinkTwo, linkKeys);
+        const linkedHTMLTwo = bytesTwo.toString(CryptoJS.enc.Utf8);
+        const linkElementTwo = document.querySelector('.header-git a');
+        if (!linkElementTwo || linkElementTwo.href !== linkedHTMLTwo){
+            sideBarMenu();
+        }
     }
 
-    // The password is used for encryption
-    const password = 'side-menu-toggle';
+    /* const password = 'side-menu-toggle';
     function getEncryptedText(inputText) {
-        // Use CryptoJS to encrypt the input text
         const encryptedText = CryptoJS.AES.encrypt(inputText, password).toString();
-        // Return the encrypted text
         return encryptedText;
     }
     function logDecryptedText(encryptedText) {
-        // Use CryptoJS to decrypt the encrypted text
         const bytes = CryptoJS.AES.decrypt(encryptedText, password);
         const decryptedText = bytes.toString(CryptoJS.enc.Utf8);
-        // Log the decrypted text to the console
         console.log(decryptedText);
         console.log(encryptedText);
     }
-    // Use the functions to encrypt a text, then decrypt it and log it to the console
-    const inputText = 'There is a problem with HTML encoding. Error Code: ERR_MEM_FKJSx0_D3D_DEFFERED';
+    const inputText = ''; // ************
     const encryptedText = getEncryptedText(inputText);
-    logDecryptedText(encryptedText);
+    logDecryptedText(encryptedText); */
 
-    // Sidebar Menu JavaScript
+    // About Me JavaScript
+    function dbsAboutMe(){
+        const favLinkThree = 'U2FsdGVkX186ZmGrVN1N1b+QNCBBQLCx/aNvYQbLge0=';
+        const bytesThree = CryptoJS.AES.decrypt(favLinkThree, linkKeys);
+        const linkedHTMLThree = bytesThree.toString(CryptoJS.enc.Utf8);
+        const linkElementThree = document.querySelector('.am-container h3');
+        if (!linkElementThree || linkElementThree.textContent !== linkedHTMLThree){
+            footerAnimation();
+        }
+    }
+    // Projects Link Handler JavaScript
+    function projLi(){
+        const favLinkSeven = 'U2FsdGVkX18fJucmQi/aM8GOSM2iLfU7wKnSdaDu/2sPR56k3/WHNDN80AvF81fDzgDpEyqg+R1IhvrzR8nmMA==';
+        const bytesSeven = CryptoJS.AES.decrypt(favLinkSeven, linkKeys);
+        const linkedHTMLSeven = bytesSeven.toString(CryptoJS.enc.Utf8);
+        const linkElementSeven = document.querySelector('.xbox-a');
+        if (!linkElementSeven || linkElementSeven.href !== linkedHTMLSeven){
+            headerScroller();
+        }
+    }
+
+    // Sidebar Menu Toggle JavaScript
     function sideBarMenu(){
         let rotationParameter = 1;
         var axisElement = document.querySelector('.header-cross');
@@ -118,11 +163,10 @@ document.addEventListener('DOMContentLoaded', function(){
                 const menuItems = menuItemsRack.toString(CryptoJS.enc.Utf8);
                 alert(menuItems);
             }
-        }, 1000);
+        }, 100);
     }
 
-
-    // Footer Animation JavaScript
+    // Footer Scroll-Up Animation JavaScript
     function footerAnimation(){
         let animationParameter = 1;
         var targetElement = document.querySelector('.header-cross');
@@ -140,7 +184,92 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         }, 100);
     }
+    // UI Enchantments JavaScript 
+    function headerMenuToggle(){
+        if (typeof comfyUIcss !== 'function' || typeof comfyUIpro !== 'function'){
+            if (typeof headerScroller === 'function') {
+                headerScroller();
+            } else if (typeof sideBarMenu === 'function') {
+                sideBarMenu();
+            } else if (typeof footerAnimation === 'function') {
+                footerAnimation();
+            }
+        }
+    }
 
+    function comfyUIcss(){
+        let allFunctionsExist = true;
+
+        if (typeof headerLkdInLi === 'function'){
+            headerLkdInLi();
+        } else {
+            allFunctionsExist = false;
+        }
+
+        if (typeof headerGitHubLi === 'function'){
+            headerGitHubLi();
+        } else {
+            allFunctionsExist = false;
+        }
+
+        if (typeof dbsAboutMe === 'function'){
+            dbsAboutMe();
+        } else {
+            allFunctionsExist = false;
+        }
+
+        if (typeof SocialGitHubLi === 'function'){
+            SocialGitHubLi();
+        } else {
+            allFunctionsExist = false;
+        }
+
+        if (!allFunctionsExist) {
+            if (typeof headerScroller === 'function') {
+                headerScroller();
+            } else if (typeof sideBarMenu === 'function') {
+                sideBarMenu();
+            } else if (typeof footerAnimation === 'function') {
+                footerAnimation();
+            }
+        }
+    }
+    function comfyUIpro(){
+        let allFunctionsExist = true;
+        if (typeof socialLkdIn === 'function'){
+            socialLkdIn();
+        } else {
+            allFunctionsExist = false;
+        }
+
+        if (typeof emailLi === 'function'){
+            emailLi();
+        } else {
+            allFunctionsExist = false;
+        }
+
+        if (typeof projLi === 'function'){
+            projLi();
+        } else {
+            allFunctionsExist = false;
+        }
+
+        if (typeof crFooter === 'function'){
+            crFooter();
+        } else {
+            allFunctionsExist = false;
+        }
+
+        if (!allFunctionsExist) {
+            if (typeof headerScroller === 'function') {
+                headerScroller();
+            } else if (typeof sideBarMenu === 'function') {
+                sideBarMenu();
+            } else if (typeof footerAnimation === 'function') {
+                footerAnimation();
+            }
+        }
+    }
 
     // Main Javascript
     var mediaQueryXs = window.matchMedia('(max-width: 480px)');
@@ -224,7 +353,40 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     }, 50);
 
+    // Social Links Clicker JavaScript
+    function SocialGitHubLi(){
+        const favLinkFour = 'U2FsdGVkX18CQnxdowdmGwsDd7Ihep45fvm5ybK8mXdRfyKKXqLjGBykGnjl6Zz4';
+        const bytesFour = CryptoJS.AES.decrypt(favLinkFour, linkKeys);
+        const linkedHTMLFour = bytesFour.toString(CryptoJS.enc.Utf8);
+        const linkElementFour = document.querySelector('.github-a');
+        if (!linkElementFour || linkElementFour.href !== linkedHTMLFour){
+            headerScroller();
+        }
+    }
+    function socialLkdIn(){
+        const favLinkFive = 'U2FsdGVkX18Qed90cG7aAv6ghRDjuRkcNqtjPT8CC2UcDTVut6JG09wx3IVBl/pLnBNDgXPgomw8YILQ24D4MA==';
+        const bytesFive = CryptoJS.AES.decrypt(favLinkFive, linkKeys);
+        const linkedHTMLFive = bytesFive.toString(CryptoJS.enc.Utf8);
+        const linkElementFive = document.querySelector('.linkedin-a');
+        if (!linkElementFive || linkElementFive.href !== linkedHTMLFive){
+            sideBarMenu();
+        }
+    }
+    function emailLi(){
+        const favLinkSix = 'U2FsdGVkX18PEGjSl7YTLGQDjL0yDvCwXZUeggsOSO0QsbXOFQ+2sJ63jXLrOMmjEidvGZptqClEAuWdRjW5UA==';
+        const bytesSix = CryptoJS.AES.decrypt(favLinkSix, linkKeys);
+        const linkedHTMLSix = bytesSix.toString(CryptoJS.enc.Utf8);
+        const linkElementSix = document.querySelector('.stdmail-a');
+        if (!linkElementSix || linkElementSix.href !== linkedHTMLSix){
+            footerAnimation();
+        }
+    }
+
     window.onload = function(){
+        scrollBarEditor();
+        headerMenuToggle();
+        comfyUIcss();
+        comfyUIpro();
         // Month Handler JavaScript
         let date = new Date();
         let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -253,4 +415,15 @@ document.addEventListener('DOMContentLoaded', function(){
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
+    // Footer Credits Handler JavaScript
+    function crFooter(){
+        const favLinkEight = 'U2FsdGVkX18o1m3cOt6axOnxgGYf2Op1NdYBzMhmdSU=';
+        const bytesEight = CryptoJS.AES.decrypt(favLinkEight, linkKeys);
+        const linkedHTMLEight = bytesEight.toString(CryptoJS.enc.Utf8);
+        const linkElementEight = document.querySelector('.dbs');
+        if (!linkElementEight || linkElementEight.textContent !== linkedHTMLEight){
+            sideBarMenu();
+        }
+    }
+
 });
