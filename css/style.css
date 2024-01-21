@@ -58,7 +58,6 @@ button{
 }
 ::-webkit-scrollbar-thumb{
     background-color: #fcee0a;
-    border-radius: 10px;
     box-sizing: border-box;
     border: 1px solid #4af1ff;
 }
@@ -1026,7 +1025,6 @@ header{
     width: 100%;
     height: auto;
     margin-top: -3.5vw;
-    padding-bottom: 200px; /* This is to be removed */
 }
 .extras h2{
     font-family: 'Robusto', sans-serif;
@@ -1192,7 +1190,6 @@ header{
     padding: 5vw 0 5vw 0;
     user-select: none;
     margin-top: -2vw;
-    display: none;
 }
 .contact-container h2{
     font-family: 'Robusto', sans-serif;
@@ -1202,3 +1199,191 @@ header{
     margin-bottom: 2vw;
     letter-spacing: 3px;
 }
+/* Foooter Styling */
+footer{
+    background-color: #2a2a2a;
+    padding-top: 2vw;
+}
+.go-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.go-up div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 6vw;
+    cursor: pointer;
+}
+.go-up svg{
+    width: 2vw;
+    height: 2vw;
+    transition: 0.6s;
+    color: #f5f5f5;
+}
+.go-up p{
+    font-family: 'SF-Pro', sans-serif;
+    font-weight: 500;
+    font-size: 0.8vw;
+    color: #f5f5f5;
+    text-align: center;
+    line-height: 0.2vw;
+}
+.go-up div:hover svg{
+    transform: translateY(-0.5vw);
+}
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5vw;
+}
+.footer-logo img{
+    width: 20vw;
+    height: auto;
+    padding-left: 0.9vw;
+}
+.love{
+    text-align: center;
+    padding-bottom: 2vw;
+}
+.love p{
+    font-family: 'SF-Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+    color: #f5f5f5;
+    text-align: center;
+}
+.footer-langs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1vw;
+}
+.footer-langs span{
+    font-family: 'SF-Pro', sans-serif;
+    font-weight: 500;
+    font-size: 0.8vw;
+    color: #0e0e0e;
+    text-align: center;
+    gap: 0.5vw;
+    background-color: #fcee0a;
+    border-radius: 5px;
+    padding: 0.3vw;
+    border: 1px #0e0e0e dashed;
+}
+.love div p{
+    font-family: 'SF-Pro', sans-serif;
+    font-weight: 500;
+    font-size: 0.8vw;
+    color: #f5f5f5;
+    text-align: center;
+}
+.love p:nth-child(1) i{
+    color: #ff0000;
+}
+@media screen and (max-width: 640px){
+    footer{
+        padding-top: 2.25vw;
+        padding-bottom: 1.75vw;
+    }
+    .go-up{
+        padding-bottom: 2vw;
+    }
+    .go-up div{
+        width: 40vw;
+    }
+    .go-up svg{
+        width: 6vw;
+        height: 6vw;
+    }
+    .go-up p{
+        font-size: 3vw;
+    }
+    .footer-logo img{
+        width: 70vw;
+        height: auto;
+        margin-bottom: -2vw;
+        padding-left: 3vw;
+    }
+    .love p{
+        font-size: 4.5vw;
+    }
+    .footer-langs span{
+        font-size: 3.5vw;
+    }
+    .love div p{
+        font-size: 3.5vw;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 768px){
+    footer{
+        padding-top: 1.5vw;
+        padding-bottom: 1vw;
+    }
+    .go-up{
+        padding-bottom: 2vw;
+    }
+    .go-up div{
+        width: 20vw;
+    }
+    .go-up svg{
+        width: 5vw;
+        height: 5vw;
+    }
+    .go-up p{
+        font-size: 2vw;
+    }
+    .footer-logo img{
+        width: 60vw;
+        height: auto;
+        padding-left: 2.9vw;
+        margin-bottom: -2.25vw;
+    }
+    .love p{
+        font-size: 3vw;
+    }
+    .footer-langs span{
+        font-size: 2.5vw;
+    }
+    .love div p{
+        font-size: 2.5vw;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    footer{
+        padding-top: 2vw;
+        padding-bottom: 1vw;
+    }
+    .go-up{
+        padding-bottom: 2vw;
+    }
+    .go-up div{
+        width: 20vw;
+    }
+    .go-up svg{
+        width: 4vw;
+        height: 4vw;
+    }
+    .go-up p{
+        font-size: 2vw;
+    }
+    .footer-logo img{
+        width: 35vw;
+        height: auto;
+        margin-bottom: -3vw;
+    }
+    .love p{
+        font-size: 2vw;
+    }
+    .footer-langs span{
+        font-size: 1.5vw;
+    }
+    .love div p{
+        font-size: 1.5vw;
+    }
+}
+

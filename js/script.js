@@ -166,5 +166,11 @@ document.addEventListener('DOMContentLoaded', function(){
         stdmailDiv.addEventListener('click', function(){
             this.querySelector('a').click();
         });
+        
+        // Footer JavaScript
+        let goUpDiv = document.getElementById('goUpDiv');
+        goUpDiv.addEventListener('click', function(){
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     }
 });
