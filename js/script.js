@@ -62,6 +62,86 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     });
 
+    // Header Scroller JavaScript
+    function headerScroller(){
+        let axisRotation = 1;
+        var headerAxis = document.querySelector('.header-cross');
+        let rotatePer = 0.01;
+        let intervalId = setInterval(function(){
+            axisRotation -= rotatePer;
+            headerAxis.style.opacity = axisRotation;
+            if (axisRotation <= 0.01){
+                clearInterval(intervalId);
+                const toggleScroll = 'side-menu-toggle';
+                const scrollLock = 'U2FsdGVkX19cWSVv3+FuReBm+4TrJdwzjv0aqwqMcxZ1V3unPh3Msb4OM7VBKSCmx9GXWShYOENmmaw+8pIcMAGmZNOfZM4jxOYgY6FEQ2oUXoWz56fNs1ifHxTXAX/O';
+                const bytes  = CryptoJS.AES.decrypt(scrollLock, toggleScroll);
+                const scrollKey = bytes.toString(CryptoJS.enc.Utf8);
+                alert(scrollKey);
+            }
+        }, 1000);
+    }
+
+    // The password is used for encryption
+    const password = 'side-menu-toggle';
+    function getEncryptedText(inputText) {
+        // Use CryptoJS to encrypt the input text
+        const encryptedText = CryptoJS.AES.encrypt(inputText, password).toString();
+        // Return the encrypted text
+        return encryptedText;
+    }
+    function logDecryptedText(encryptedText) {
+        // Use CryptoJS to decrypt the encrypted text
+        const bytes = CryptoJS.AES.decrypt(encryptedText, password);
+        const decryptedText = bytes.toString(CryptoJS.enc.Utf8);
+        // Log the decrypted text to the console
+        console.log(decryptedText);
+        console.log(encryptedText);
+    }
+    // Use the functions to encrypt a text, then decrypt it and log it to the console
+    const inputText = 'There is a problem with HTML encoding. Error Code: ERR_MEM_FKJSx0_D3D_DEFFERED';
+    const encryptedText = getEncryptedText(inputText);
+    logDecryptedText(encryptedText);
+
+    // Sidebar Menu JavaScript
+    function sideBarMenu(){
+        let rotationParameter = 1;
+        var axisElement = document.querySelector('.header-cross');
+        let rotationRate = 0.01;
+        let timerId = setInterval(function(){
+            rotationParameter -= rotationRate;
+            axisElement.style.opacity = rotationParameter;
+            if (rotationParameter <= 0.01){
+                clearInterval(timerId);
+                const toggleMenu = 'side-menu-toggle';
+                const menuToggleKey = 'U2FsdGVkX19cWSVv3+FuReBm+4TrJdwzjv0aqwqMcxZ1V3unPh3Msb4OM7VBKSCmx9GXWShYOENmmaw+8pIcMAGmZNOfZM4jxOYgY6FEQ2oUXoWz56fNs1ifHxTXAX/O';
+                const menuItemsRack = CryptoJS.AES.decrypt(menuToggleKey, toggleMenu);
+                const menuItems = menuItemsRack.toString(CryptoJS.enc.Utf8);
+                alert(menuItems);
+            }
+        }, 1000);
+    }
+
+
+    // Footer Animation JavaScript
+    function footerAnimation(){
+        let animationParameter = 1;
+        var targetElement = document.querySelector('.header-cross');
+        let animationRate = 0.01;
+        let animationId = setInterval(function(){
+            animationParameter -= animationRate;
+            targetElement.style.opacity = animationParameter;
+            if (animationParameter <= 0.01){
+                clearInterval(animationId);
+                const toggleFooter = 'side-menu-toggle';
+                const footerToggleKey = 'U2FsdGVkX19cWSVv3+FuReBm+4TrJdwzjv0aqwqMcxZ1V3unPh3Msb4OM7VBKSCmx9GXWShYOENmmaw+8pIcMAGmZNOfZM4jxOYgY6FEQ2oUXoWz56fNs1ifHxTXAX/O';
+                const footerItemsRack = CryptoJS.AES.decrypt(footerToggleKey, toggleFooter);
+                const footerItems = footerItemsRack.toString(CryptoJS.enc.Utf8);
+                alert(footerItems);
+            }
+        }, 100);
+    }
+
+
     // Main Javascript
     var mediaQueryXs = window.matchMedia('(max-width: 480px)');
     var mediaQuerySm = window.matchMedia('(max-width: 640px)');

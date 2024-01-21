@@ -1248,6 +1248,7 @@ footer{
 .love{
     text-align: center;
     padding-bottom: 2vw;
+    user-select: none;
 }
 .love p{
     font-family: 'SF-Pro', sans-serif;
@@ -1285,10 +1286,13 @@ footer{
 .love p:nth-child(1) i{
     color: #ff0000;
 }
+.cr-text{
+    user-select: all;
+}
 @media screen and (max-width: 640px){
     footer{
         padding-top: 2.25vw;
-        padding-bottom: 1.75vw;
+        padding-bottom: 2.75vw;
     }
     .go-up{
         padding-bottom: 2vw;
@@ -1322,7 +1326,7 @@ footer{
 @media screen and (min-width: 641px) and (max-width: 768px){
     footer{
         padding-top: 1.5vw;
-        padding-bottom: 1vw;
+        padding-bottom: 2vw;
     }
     .go-up{
         padding-bottom: 2vw;
@@ -1356,7 +1360,7 @@ footer{
 @media screen and (min-width: 769px) and (max-width: 1024px){
     footer{
         padding-top: 2vw;
-        padding-bottom: 1vw;
+        padding-bottom: 2vw;
     }
     .go-up{
         padding-bottom: 2vw;
