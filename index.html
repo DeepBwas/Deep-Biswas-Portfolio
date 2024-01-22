@@ -357,7 +357,6 @@
                     <p>More projects coming soon...</p>
                 </div>
             </div>
-            <!-- Social Links -->
             <div class="socials" id="socials">
                 <div class="socials-container">
                     <h2>SOCIALS</h2>
@@ -404,7 +403,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Extras -->
             <div class="extras" id="extras">
                 <h2>EXTRAS</h2>
                 <div class="ext-con">
@@ -427,8 +425,30 @@
             </div>
             <!-- Contact Information -->
             <div class="contact" id="contact">
+                <h2>CONTACT</h2>
+                <p class="contact-p">Use this form to send me a message</p>
                 <div class="contact-container">
-                    <h2>CONTACT</h2>
+                    <form id="contactForm">
+                        <div class="form-group form-row">
+                            <div>
+                                <input type="text" id="fullName" name="fullName" placeholder="Full Name">
+                                <p class="form-error" id="fullNameError">Name cannot be empty!</p>
+                            </div>
+                            <div>
+                                <input type="email" id="email" name="email" placeholder="Email">
+                                <p class="form-error" id="emailError">Email cannot be empty!</p>  
+                            </div>                      
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject">
+                            <p class="form-error" id="subjectError">Subject cannot be empty!</p>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Message"></textarea>
+                            <p class="form-error" id="messageError">Message cannot be empty!</p>
+                        </div>
+                        <button class="send-button" type="submit">Send Message</button>
+                    </form>
                 </div>
             </div>
         </main>

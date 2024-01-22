@@ -1,4 +1,5 @@
 /* DEEP BISWAS */
+/* Portfolio Website */
 @media screen and (max-width: 640px){
 
 }
@@ -54,7 +55,7 @@ button{
     width: 10px;
 }
 ::-webkit-scrollbar-track{
-    background-color: #0e0e0e;
+    background-color: #222222;
 }
 ::-webkit-scrollbar-thumb{
     background-color: #fcee0a;
@@ -415,7 +416,7 @@ header{
         font-size: 4vw;
     }
 }
-/* Tech Stack */
+/* Tech Stack Styling */
 .tech-stack{
     margin-top: -20px;
     margin-bottom: -1vw;
@@ -495,7 +496,7 @@ header{
         font-size: 2.5vw;
     }
 }
-/* About Me */
+/* About Me Styling */
 .about-me{
     background: linear-gradient(#0d0d0d, #ad780d);
     padding: 5vw 0 5vw 0;
@@ -593,7 +594,7 @@ header{
         height: 20vw;
     }
 }
-/* My Projects */
+/* My Projects Styling */
 .my-projects{
     height: auto;
     width: 100%;
@@ -1187,17 +1188,261 @@ header{
 /* Conatact Styling */
 .contact{
     background: #0e0e0e;
-    padding: 5vw 0 5vw 0;
+    padding: 5vw 12.8vw 5vw 12.8vw;
     user-select: none;
     margin-top: -2vw;
 }
-.contact-container h2{
+.contact h2{
     font-family: 'Robusto', sans-serif;
     font-size: 3.75vw;
     color: #f5f5f5;
     text-align: center;
     margin-bottom: 2vw;
     letter-spacing: 3px;
+}
+.contact-p{
+    font-family: 'SF-Pro', sans-serif;
+    font-size: 1.5vw;
+    color: #f5f5f5;
+    text-align: center;
+    margin-top: -1vw;
+}
+.contact-container{
+    background-color: #fec84e;
+    background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+    padding: 5vw;
+    border-radius: 10px;
+}
+input::placeholder{
+    color: #0e0e0e;
+    opacity: 1;
+}
+.form-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2vw;
+}
+.form-row div{
+    width: 50%;
+}
+.form-row div input{
+    width: 95.96%;
+    height: 2vw;
+    border-radius: 5px;
+    padding-left: 1vw;
+    font-family: 'SF-Pro', sans-serif;
+    font-size: 1vw;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    outline: none;
+}
+.form-error{
+    font-family: 'SF-Pro', sans-serif;
+    font-size: 1vw;
+    color: #ff0000;
+    width: 100%;
+    line-height: 0.1vw;
+    opacity: 0;
+}
+#emailError{
+    opacity: 0; /* This is the trick */
+}
+.form-group input{
+    width: 98%;
+    height: 2vw;
+    border-radius: 5px;
+    padding-left: 1vw;
+    font-family: 'SF-Pro', sans-serif;
+    font-size: 1vw;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    outline: none;
+}
+.form-group textarea{
+    width: 96.6%;
+    height: 10vw;
+    border-radius: 5px;
+    padding: 1vw;
+    font-family: 'SF-Pro', sans-serif;
+    font-size: 1vw;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    outline: none;
+}
+.form-group textarea::placeholder{
+    color: #0e0e0e;
+    opacity: 1;
+}
+.send-button{
+    width: 99.9%;
+    height: 3vw;
+    border-radius: 5px;
+    font-family: 'SF-Pro', sans-serif;
+    font-size: 1vw;
+    border: none;
+    box-sizing: border-box;
+    background-color: #FFD700;
+    border: 1px #000 dashed;
+    transition: 0.5s;
+}
+.send-button:hover{
+    transform: scale(1.01);
+    border: 1px #000 solid;
+}
+.send-button:active{
+    transform: scale(0.99);
+}
+@media screen and (max-width: 640px){
+    .contact{
+        padding: 5vw 3vw 5vw 3vw;
+    }
+    .contact-p{
+        font-size: 4vw;
+    }
+    .contact h2{
+        font-size: 10vw;
+    }
+    .contact-container{
+        padding: 8vw;
+    }
+    .form-row{
+        flex-direction: column;
+        gap: 0;
+    }
+    .form-row div{
+        width: 100%;
+    }
+    .form-row div input{
+        width: 96.33%;
+        height: 10vw;
+        border-radius: 4px;
+        font-size: 4vw;
+        padding-left: 2vw;
+    }
+    .form-error{
+        font-size: 4vw;
+    }
+    .form-group input{
+        width: 96.4%;
+        height: 10vw;
+        border-radius: 4px;
+        padding-left: 2vw;
+        font-size: 4vw;
+    }
+    .form-group textarea{
+        width: 94.466%;
+        height: 25vw;
+        border-radius: 4px;
+        padding: 2vw;
+        font-size: 4vw;
+    }
+    .send-button{
+        width: 99.56%;
+        height: 12vw;
+        border-radius: 4px;
+        font-size: 4vw;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 768px){
+    .contact{
+        padding: 5vw 3vw 5vw 3vw;
+    }
+    .contact-p{
+        font-size: 2.5vw;
+    }
+    .contact h2{
+        font-size: 7vw;
+    }
+    .contact-container{
+        padding: 5vw;
+    }
+    .form-row{
+        flex-direction: column;
+        gap: 0;
+    }
+    .form-row div{
+        width: 100%;
+    }
+    .form-row div input{
+        width: 98.54%;
+        height: 5vw;
+        border-radius: 4px;
+        font-size: 2.5vw;
+    }
+    .form-error{
+        font-size: 2.5vw;
+    }
+    .form-group input{
+        width: 98.54%;
+        height: 5vw;
+        border-radius: 4px;
+        font-size: 2.5vw;
+    }
+    .form-group textarea{
+        width: 97.47%;
+        height: 10vw;
+        border-radius: 4px;
+    }
+    .form-group textarea::placeholder{
+        font-size: 2.5vw;
+    }
+    .send-button{
+        height: 6vw;
+        border-radius: 4px;
+        font-size: 2.5vw;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .contact{
+        padding: 5vw 3vw 5vw 3vw;
+    }
+    .contact h2{
+        font-size: 6vw;
+    }
+    .contact-p{
+        font-size: 2vw;
+    }
+    .contact-container{
+        padding: 5vw;
+    }
+    .form-row{
+        flex-direction: column;
+        gap: 0;
+    }
+    .form-row div{
+        width: 100%;
+    }
+    .form-row div input{
+        width: 98.54%;
+        height: 3.2vw;
+        border-radius: 4px;
+        font-size: 2vw;
+    }
+    .form-error{
+        font-size: 2vw;
+    }
+    .form-group input{
+        width: 98.54%;
+        height: 3.2vw;
+        border-radius: 4px;
+        font-size: 2vw;
+    }
+    .form-group textarea{
+        width: 97.47%;
+        height: 7vw;
+        border-radius: 4px;
+        font-size: 2vw;
+    }
+    .form-group textarea::placeholder{
+        font-size: 2vw;
+    }
+    .send-button{
+        height: 4vw;
+        border-radius: 4px;
+        font-size: 2vw;
+    }
 }
 /* Foooter Styling */
 footer{
@@ -1390,4 +1635,3 @@ footer{
         font-size: 1.5vw;
     }
 }
-
