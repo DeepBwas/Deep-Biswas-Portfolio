@@ -1445,6 +1445,115 @@ input::placeholder{
         font-size: 2vw;
     }
 }
+.popup{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-container{
+    background-color: #fafafa;
+    width: 25vw;
+    height: 25vw;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#closePopup{
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    cursor: pointer;
+    transition: 0.6s;
+    outline: none;
+    background: none;
+    border: none;
+    color: #0e0e0e;
+    font-size: 1.5vw;
+    transition: 0.4s;
+}
+#closePopup:hover{
+    transform: scale(1.1);
+    color: #ff0000;
+}
+#closePopup:active{
+    transform: scale(0.9);
+}
+.popup-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.popup-content img{
+    width: 8vw;
+    height: 8vw;
+}
+.popup-content p{
+    font-family: 'SF-Pro', sans-serif;
+    font-size: 1.25vw;
+    color: #0e0e0e;
+    text-align: center;
+    margin-top: 1vw;
+}
+@media screen and (max-width: 640px){
+    .popup-container{
+        width: 90vw;
+        height: 90vw;
+    }
+    #closePopup{
+        font-size: 5.5vw;
+    }
+    .popup-content img{
+        width: 30vw;
+        height: 30vw;
+    }
+    .popup-content p{
+        font-size: 5vw;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 768px){
+    .popup-container{
+        width: 60vw;
+        height: 60vw;
+    }
+    #closePopup{
+        font-size: 3.5vw;
+    }
+    .popup-content img{
+        width: 20vw;
+        height: 20vw;
+    }
+    .popup-content p{
+        font-size: 3.5vw;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .popup-container{
+        width: 40vw;
+        height: 40vw;
+    }
+    #closePopup{
+        font-size: 2vw;
+    }
+    .popup-content img{
+        width: 15vw;
+        height: 15vw;
+    }
+    .popup-content p{
+        font-size: 2.5vw;
+    }
+} 
 /* Foooter Styling */
 footer{
     background-color: #2a2a2a;
