@@ -1316,7 +1316,7 @@ input::placeholder{
         width: 100%;
     }
     .form-row div input{
-        width: 96.33%;
+        width: 95%;
         height: 10vw;
         border-radius: 4px;
         font-size: 4vw;
@@ -1326,7 +1326,7 @@ input::placeholder{
         font-size: 4vw;
     }
     .form-group input{
-        width: 96.4%;
+        width: 95%;
         height: 10vw;
         border-radius: 4px;
         padding-left: 2vw;
