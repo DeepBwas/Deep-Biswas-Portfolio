@@ -387,6 +387,8 @@ document.addEventListener('DOMContentLoaded', function(){
         headerMenuToggle();
         comfyUIcss();
         comfyUIpro();
+        // Popup Handler JavaScript
+        //document.getElementById('popup').style.display = 'flex';
         // Month Handler JavaScript
         let date = new Date();
         let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
