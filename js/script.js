@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
+    
     // Header JavaScript
     var logo = document.querySelector('.header-logo img');
     logo.setAttribute('data-original-src', logo.src);
@@ -387,26 +388,23 @@ document.addEventListener('DOMContentLoaded', function(){
         headerMenuToggle();
         comfyUIcss();
         comfyUIpro();
-        // Popup Handler JavaScript
-        //document.getElementById('popup').style.display = 'flex';
+
         // Month Handler JavaScript
         let date = new Date();
         let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         let month = monthNames[date.getMonth()];
         document.getElementById("currentMonth").textContent = month;
+
         // Social Clicks Handler JavaScript
         const githubDiv = document.getElementById('github');
         const linkedinDiv = document.getElementById('linkedin');
         const stdmailDiv = document.getElementById('stdmail');
-
         githubDiv.addEventListener('click', function(){
             this.querySelector('a').click();
         });
-
         linkedinDiv.addEventListener('click', function(){
             this.querySelector('a').click();
         });
-
         stdmailDiv.addEventListener('click', function(){
             this.querySelector('a').click();
         });
@@ -428,4 +426,106 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     }
 
+    // Popup Handler JavaScript
+    const popup = document.getElementById('popup');
+    const popupClose = document.getElementById('closePopup');
+
+    function togglePopup(){
+        popup.style.display = 'flex';
+        popupClose.addEventListener('click', function(){
+            popup.style.display = 'none';
+        });
+        window.addEventListener('click', function(){
+            popup.style.display = 'none';
+        });
+        document.querySelector('.popup-container').addEventListener('click', function(event){
+            event.stopPropagation();
+        });
+    }
+
+    // Conatact Form Handler JavaScript
+    document.querySelector('#contactForm').addEventListener('submit', function(event) {
+        var isEmptyFieldExists = false;
+
+        var fullName = document.querySelector('#fullName');
+        var email = document.querySelector('#email');
+        var subject = document.querySelector('#subject');
+        var message = document.querySelector('#message');
+
+        var emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+
+        if (fullName.value === ''){
+            document.querySelector('#fullNameError').style.opacity = '1';
+            isEmptyFieldExists = true;
+        } else {
+            document.querySelector('#fullNameError').style.opacity = '0';
+        }
+        if (email.value === ''){
+            document.querySelector('#emailError').style.opacity = '1';
+            isEmptyFieldExists = true;
+        } else if (!emailRegex.test(email.value)){
+            document.querySelector('#emailError').textContent = 'Enter a valid email!';
+            document.querySelector('#emailError').style.opacity = '1';
+            isEmptyFieldExists = true;
+        } else {
+            document.querySelector('#emailError').style.opacity = '0';
+        }
+        if (subject.value === ''){
+            document.querySelector('#subjectError').style.opacity = '1';
+            isEmptyFieldExists = true;
+        } else {
+            document.querySelector('#subjectError').style.opacity = '0';
+        }
+        if (message.value === ''){
+            document.querySelector('#messageError').style.opacity = '1';
+            isEmptyFieldExists = true;
+        } else {
+            document.querySelector('#messageError').style.opacity = '0';
+        }
+        if (isEmptyFieldExists) {
+            event.preventDefault();
+        } else {
+            localStorage.setItem('fullName', fullName.value);
+            localStorage.setItem('email', email.value);
+            localStorage.setItem('subject', subject.value);
+            localStorage.setItem('message', message.value);
+            setTimeout(function() {
+                localStorage.removeItem('fullName');
+                localStorage.removeItem('email');
+                localStorage.removeItem('subject');
+                localStorage.removeItem('message');
+            }, 5000);
+
+            localStorage.setItem('showPopup', 'true');
+        }
+    });
+    window.addEventListener('load', function() {
+        if (localStorage.getItem('showPopup') === 'true') {
+            sendEmail();
+            togglePopup();
+            localStorage.removeItem('showPopup');
+        }
+    });
+    function sendEmail(){
+        var fullName = localStorage.getItem('fullName');
+        var email = localStorage.getItem('email');
+        var subject = localStorage.getItem('subject');
+        var message = localStorage.getItem('message');
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "tommywalkerx9@gmail.com",
+            Password : "568F6A72E499524516ECA0387AD0D98AC01C",
+            To : 'deep.bwas@gmail.com',
+            From : "tommywalkerx9@gmail.com",
+            Subject : "Portfoilo Contact Form Submission",
+            Body : "Full Name: "+ fullName
+                    + "<br><br>Email: " + email
+                    + "<br><br>Subject: " + subject
+                    + "<br><br>Message: <br>" 
+                    + message
+        }).then(
+          //message => alert(message)
+        );
+    }
+    // JS Ends Here.
 });
