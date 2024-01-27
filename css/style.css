@@ -60,7 +60,7 @@ button{
 ::-webkit-scrollbar-thumb{
     background-color: #fcee0a;
     box-sizing: border-box;
-    border: 1px solid #4af1ff;
+    border: 1px solid #0e0e0e;
 }
 @media screen and (max-width: 860px){
     ::-webkit-scrollbar{
