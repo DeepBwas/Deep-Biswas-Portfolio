@@ -21,9 +21,19 @@
             <div class="buff-container">
                 <img src="./img/warning-buffer.png" alt="Warning">
                 <h2>Be Advised</h2>
-                <p>This website is flagged as a dangerous site by Google. I am hosting it using a free php hosting service named <a href="https://www.000webhost.com/" target="_blank">000Webhost</a> by Hostinger. Google is assuming I want to impersonate another website for malicious purposes. But this site is 100% safe & secure. You may proceed ahead and visit the site for demonstration. Please ignore the security warnings.</p>
+                <p>This website is flagged as a dangerous site by Google. I am hosting it using a free php hosting service named <a href="https://www.000webhost.com/" target="_blank">000Webhost</a> by Hostinger. Google assumes I want to impersonate another website for malicious purposes. But this site is 100% safe & secure. You may proceed ahead and visit the site for demonstration. Please ignore the security warnings.</p>
                 <a id="visitLink" class="visit-link" href=""><button>View Demo</button></a>
             </div>
         </main>
     </body>
+    <script>
+        var params = new URLSearchParams(window.location.search);
+        var request = params.get('request');
+        var visitLink = document.getElementById('visitLink');
+        if (request === 'gitsocial') {
+            visitLink.setAttribute('href', 'https://gitsocial.000webhostapp.com/');
+        }else if (request === 'minihplogin') {
+            visitLink.setAttribute('href', 'https://minihorsepower.000webhostapp.com/');
+        }
+    </script>
 </html>
