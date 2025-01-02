@@ -31,7 +31,7 @@
   font-family: "SF-Pro";
   src: url(../fonts/SF-Pro.otf);
 }
-/* Styles for the html pages */
+/* Global Styles */
 .html {
   scroll-behavior: smooth;
 }
@@ -65,7 +65,7 @@ button {
     border-radius: 5px;
   }
 }
-/* Styles for the header */
+/* Header Styling */
 header {
   width: 100vw;
   position: fixed;
@@ -436,7 +436,7 @@ header {
 }
 .tech-s-container {
   text-align: center;
-  padding: 0 2vw 3vw 2vw;
+  padding: 0 5vw 3vw 5vw;
 }
 .tech-s-container h2 {
   font-family: "Robusto", sans-serif;
@@ -458,7 +458,7 @@ header {
 .tech-stack-logos {
   display: flex;
   flex-wrap: wrap;
-  gap: 6vw;
+  gap: 5vw;
   justify-content: center;
   align-items: center;
 }
@@ -484,7 +484,7 @@ header {
     font-size: 10vw;
   }
   .tech-stack p {
-    font-size: 4vw;
+    font-size: 3vw;
   }
   .ts-logo a p {
     font-size: 4vw;
@@ -498,7 +498,7 @@ header {
     font-size: 7vw;
   }
   .tech-stack p {
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
   .ts-logo a p {
     font-size: 3vw;
@@ -512,7 +512,7 @@ header {
     font-size: 6vw;
   }
   .tech-stack p {
-    font-size: 1.5vw;
+    font-size: 1.25vw;
   }
   .ts-logo a p {
     font-size: 2.5vw;
@@ -521,9 +521,8 @@ header {
 /* About Me Styling */
 .about-me {
   background: linear-gradient(#0d0d0d, #ad780d);
-  padding: 5vw 0;
-  text-align: center;
   user-select: none;
+  width: 100%;
 }
 
 .am-container {
@@ -559,17 +558,21 @@ header {
   font-size: 1vw;
   color: #f5f5f5;
   width: 50vw;
+  text-align: center;
 }
 
 .am-details {
+  margin: 0 auto;
   background: rgba(0, 0, 0, 0.5);
-  margin-left: 15vw;
-    margin-right: 15vw;
+  width: 74.5%;
+  border-radius: 10px;
+  padding-top: 1rem;
 }
 
 .education,
 .work {
   margin-top: 2vw;
+  width: 100%;
 }
 
 .education h3,
@@ -579,18 +582,19 @@ header {
   font-size: 1.5vw;
   color: #f5f5f5;
   text-align: center;
-  padding-bottom: 0.1vw;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .education-item,
 .work-item {
   display: flex;
+  padding: 2vw;
 }
 
 .education-item img,
 .work-item img {
-  width: 100%;
+  width: 10rem;
   height: 10rem;
   margin-right: 1vw;
   background-color: #f5f5f5;
@@ -607,28 +611,41 @@ header {
   text-align: left;
 }
 
-.education-details-title,
-.work-details-title {
+.education-details-header,
+.work-details-header {
   display: flex;
+  margin: 0;
   justify-content: space-between;
-  text-align: left;
 }
 
-.education-details-title p,
-.work-details-title p {
-  font-family: "Poppins", sans-serif;
+.education-title,
+.work-title {
+  font-family: "SF-Pro", sans-serif;
+  font-weight: 500;
+  font-size: 1.5vw;
+  color: #f5f5f5;
+  text-align: left;
+  margin: 0;
+}
+
+.education-details-description,
+.work-details-description {
   font-weight: 500;
   font-size: 1.2vw;
   color: #f5f5f5;
   text-align: left;
   margin: 0;
-  text-transform: uppercase;
+  font-family: "SF-Pro", sans-serif;
+  margin-top: 1rem;
 }
 
-.dates {
-  font-size: 0.8vw;
+.education-dates,
+.work-dates {
+  font-size: 1vw;
   color: #ccc;
+  margin: 0;
   margin-top: 0.5vw;
+  font-family: "SF-Pro", sans-serif;
 }
 
 .description {
@@ -681,6 +698,58 @@ header {
     width: 40vw;
     height: 40vw;
   }
+  .am-details {
+    width: 94%;
+    padding-bottom: 1rem;
+  }
+  .education h3,
+  .work h3 {
+    font-size: 4vw;
+  }
+  .education-item img,
+  .work-item img {
+    width: 7rem;
+    height: 7rem;
+  }
+  .education-item,
+  .work-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .education-details-header,
+  .work-details-header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .education-title,
+  .work-title,
+  .education-details-description,
+  .work-details-description {
+    font-size: 4vw;
+  }
+  .education-dates,
+  .work-dates {
+    font-size: 3vw;
+    margin-top: 2vw;
+  }
+  .education-item img,
+  .work-item img {
+    margin-bottom: 1vw;
+  }
+  .education-details,
+  .work-details {
+    align-items: center;
+  }
+  .education-title,
+  .work-title,
+  .education-dates,
+  .work-dates,
+  .education-details-description,
+  .work-details-description {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 641px) and (max-width: 768px) {
@@ -697,6 +766,57 @@ header {
     width: 30vw;
     height: 30vw;
   }
+  .am-details {
+    width: 94%;
+    padding-bottom: 1rem;
+  }
+  .education h3,
+  .work h3 {
+    font-size: 4vw;
+  }
+  .education-item img,
+  .work-item img {
+    width: 7rem;
+    height: 7rem;
+  }
+  .education-item,
+  .work-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .education-details-header,
+  .work-details-header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .education-title,
+  .work-title,
+  .education-details-description,
+  .work-details-description {
+    font-size: 3vw;
+  }
+  .education-dates,
+  .work-dates {
+    font-size: 2.5vw;
+    margin-top: 0.75vw;
+  }
+  .education-item img,
+  .work-item img {
+    margin-bottom: 1vw;
+  }
+  .education-details,
+  .work-details {
+    align-items: center;
+  }
+  .education-title,
+  .work-title,
+  .education-dates,
+  .work-dates,
+  .education-details-description,
+  .work-details-description {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -712,6 +832,57 @@ header {
   .am-container img {
     width: 20vw;
     height: 20vw;
+  }
+  .am-details {
+    width: 94%;
+    padding-bottom: 1rem;
+  }
+  .education h3,
+  .work h3 {
+    font-size: 3.5vw;
+  }
+  .education-item img,
+  .work-item img {
+    width: 9rem;
+    height: 9rem;
+  }
+  .education-item,
+  .work-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .education-details-header,
+  .work-details-header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .education-title,
+  .work-title,
+  .education-details-description,
+  .work-details-description {
+    font-size: 2.5vw;
+  }
+  .education-dates,
+  .work-dates {
+    font-size: 2vw;
+    margin-top: 0.8vw;
+  }
+  .education-item img,
+  .work-item img {
+    margin-bottom: 1vw;
+  }
+  .education-details,
+  .work-details {
+    align-items: center;
+  }
+  .education-title,
+  .work-title,
+  .education-dates,
+  .work-dates,
+  .education-details-description,
+  .work-details-description {
+    text-align: center;
   }
 }
 /* My Projects Styling */
