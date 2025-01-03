@@ -514,8 +514,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (isEmptyFieldExists) {
         return;
       }
-
-      // Send form data to Formspree
       fetch("https://formspree.io/f/xbllpoyg", {
         method: "POST",
         headers: {
