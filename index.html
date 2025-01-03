@@ -36,7 +36,7 @@
                     <a href="https://www.linkedin.com/in/deep-bwas/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
                 <div class="header-git">
-                    <a href="https://github.com/DeepBwas" target="_blank"><i class="fa-brands fa-github"></i></i></a>
+                    <a href="https://github.com/DeepBwas" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </div>
                 <div class="menu-button" id="hamburger">
                     <i class="fas fa-bars"></i>
@@ -653,7 +653,7 @@
                 <h2>CONTACT</h2> <!--  TODO: Fix the contact form -->
                 <p class="contact-p">Use this form to send me a message</p>
                 <div class="contact-container">
-                    <form id="contactForm" novalidate>
+                    <form id="contactForm" method="POST" novalidate>
                         <div class="form-group form-row">
                             <div>
                                 <input type="text" id="fullName" name="fullName" placeholder="Full Name" autocomplete="off">
@@ -680,8 +680,8 @@
                 <div class="popup-container">
                     <button id="closePopup"><i class="fa-solid fa-xmark"></i></button>
                     <div class="popup-content">
-                        <img src="./img/popup-tick-mark.png" alt="Success Tick" />
-                        <p>Message Sent!</p>
+                        <img id="popupImage"/>
+                        <p id="popupMessage"></p>
                     </div>
                 </div>
             </div>
