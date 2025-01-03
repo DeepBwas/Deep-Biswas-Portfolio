@@ -199,7 +199,7 @@ header {
     display: block;
   }
 }
-/* Main Styling */
+/* Banner Styling */
 .first-banner {
   height: 100%;
   width: 100%;
@@ -476,6 +476,10 @@ header {
 .ts-logo a:hover svg {
   filter: drop-shadow(0 0 10px #ffffff);
 }
+.google-cloud {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
 @media screen and (max-width: 640px) {
   .ts-logo {
     margin-bottom: 0;
@@ -543,7 +547,7 @@ header {
 }
 
 .am-container h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: "SF-Pro", sans-serif;
   font-weight: 500;
   font-size: 1.5vw;
   color: #fcee0a;
@@ -577,12 +581,14 @@ header {
 
 .education h3,
 .work h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Robusto", sans-serif;
   font-weight: 500;
-  font-size: 1.5vw;
+  font-size: 2.5vw;
   color: #f5f5f5;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #fcee0a;
   margin: 0;
 }
 
@@ -704,7 +710,7 @@ header {
   }
   .education h3,
   .work h3 {
-    font-size: 4vw;
+    font-size: 8vw;
   }
   .education-item img,
   .work-item img {
@@ -772,7 +778,7 @@ header {
   }
   .education h3,
   .work h3 {
-    font-size: 4vw;
+    font-size: 6vw;
   }
   .education-item img,
   .work-item img {
@@ -839,7 +845,7 @@ header {
   }
   .education h3,
   .work h3 {
-    font-size: 3.5vw;
+    font-size: 4.5vw;
   }
   .education-item img,
   .work-item img {
