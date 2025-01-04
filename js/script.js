@@ -71,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector(".header-container").classList.remove("tpu");
     }
   });
-  // Header JS Done
 
   // Header Scroller & Scrollbar JavaScript
   const linkKeys = "side-menu-toggle";
@@ -301,6 +300,11 @@ document.addEventListener("DOMContentLoaded", function () {
   var mediaQueryLg = window.matchMedia("(max-width: 1024px)");
   var mediaQueryXl = window.matchMedia("(max-width: 1280px)");
   var mediaQuery2xl = window.matchMedia("(max-width: 1536px)");
+
+  var eldenring = document.querySelector(".er");
+  eldenring.addEventListener("click", function () {
+    window.open("https://store.steampowered.com/app/1245620/ELDEN_RING/");
+  });
 
   var bannerOneImg = document.querySelector(".first-banner img");
 

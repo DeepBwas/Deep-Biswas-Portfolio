@@ -552,8 +552,9 @@ header {
   font-size: 1.5vw;
   color: #fcee0a;
   text-align: center;
-  padding-bottom: 0.1vw;
   text-transform: uppercase;
+  margin: 0;
+  margin-top: 1.25rem;
 }
 
 .am-container p {
@@ -912,6 +913,7 @@ header {
   text-align: center;
   margin-bottom: 2vw;
   letter-spacing: 3px;
+  text-shadow: #010101 0 0 5px;
 }
 .mp-container p {
   font-family: "SF Pro", sans-serif;
@@ -1039,6 +1041,12 @@ header {
   height: 14vw;
   width: auto;
   border-radius: 8px;
+}
+.er {
+  text-decoration: 1.5px underline;
+}
+.er:hover {
+  cursor: pointer;
 }
 @media screen and (max-width: 640px) {
   .mp-container h2 {
